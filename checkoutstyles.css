@@ -331,3 +331,30 @@ header {
         flex-direction: column;
     }
 }
+@media (max-width: 600px) {
+    header {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 12px 16px;
+    }
+    .logo {
+        font-size: 16px;
+    }
+    .nav-icons {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .checkout.container {
+        margin: 12px;
+        padding: 16px;
+        gap: 24px;
+    }
+    .form-row {
+        flex-direction: column;
+    }
+    .form-row .form-group:first-child {
+        flex: 1;
+    }
+}
