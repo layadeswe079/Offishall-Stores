@@ -1,16 +1,15 @@
+/* ---------- Responsive ---------- */
 body {
-    height: 100vh;
-    background: linear-gradient(135deg, #000000, #b44800);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0;
+    min-height: 100vh;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
 }
 .container {
-    background: #111;
-    padding: 30px;
-    border-radius: 12px;
-    width: 350px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 350px;
+    box-sizing: border-box;
 }
 @media (max-width: 480px) {
     .container {
