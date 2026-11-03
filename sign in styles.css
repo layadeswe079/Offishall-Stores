@@ -12,6 +12,14 @@ body {
     width: 350px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
+@media (max-width: 480px) {
+    .container {
+        padding: 24px 20px;
+    }
+    .title h2 {
+        font-size: 22px;
+    }
+}
 .title {
     text-align: center;
     margin-bottom: 20px;
