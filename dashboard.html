@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+        <title>Offishall Stores </title>
+        <link rel="stylesheet" href="Dashboard styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo"><i class="fa-solid fa-bag-shopping"></i><span class="offishall">OFFISHALL</span> <span class="stores">STORES</span></div>
+            <div class="nav-icons">
+                <div class="icon">
+                <i class="fas fa-bell"></i>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-user"></i>
+                    <span id="usernameNav">John Doe</span>
+                </div>
+                <div class="icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+                <div class="logout-buttons">
+                    <button class="btn logout" id="logoutBtn">Logout</button>
+                </div>
+            </div>
+            </header>
+
+            <!-- Cart Modal -->
+            <div id="cartModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Your Cart</h2>
+                        <span class="close-btn" onclick="closeCartModal()">&times;</span>
+                    </div>
+                    <div id="cartItems" class="cart-items">
+                        <!-- Cart items will be dynamically added here -->
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn-checkout" id="proceedToCheckoutBtn">Proceed to Checkout</button>
+                    </div>
+                </div>
+            </div>
+            
+            <section class="welcome">
+                <h1><span>WELCOME,</span><span id="usernameWelcome">John Doe</span></h1>
+                <p>Browse our collection of products and find the perfect one for you.</p>
+            </section>
+
+            <section class="products">
+                <div class="card">
+                    <span class="tag new">NEW</span>
+                    <img src="product1.jpg">
+                    <div class="info">
+                    <h3>BLACK HOODIE</h3>
+                    <p class="price">&#8358;10,000</p>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <span class="tag hot">HOT</span>
+                    <img src="product2.jpg">
+                    <div class="info">
+                    <h3>WHITE SNEAKERS</h3>
+                    <p class="price">&#8358;22,000</p>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <span class="tag sale">SALE</span>
+                    <img src="product3.jpg">
+                    <div class="info">
+                    <h3>PREMIUM LEATHER JACKET</h3>
+                    <p class="price">&#8358;30,000</p>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <span class="tag new">NEW</span>
+                    <img src="product4.jpg">
+                    <div class="info">
+                    <h3>CLASSIC DENIM JEANS</h3>
+                    <p class="price">&#8358;18,000</p>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <span class="tag sale">SALE</span>
+                    <img src="product5.jpg">
+                    <div class="info">
+                    <h3>SNAPBACK</h3>
+                    <p class="price">&#8358;12,000</p>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <span class="tag new">NEW</span>
+                    <img src="product6.jpg">
+                    <div class="info">
+                    <h3>CROSS BAG</h3>
+                    <p class="price">&#8358;15,000</p>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                    </div>
+                </div>
+                
+            </section>
+            <script src="script.js"></script>
+    </body>
+</html>

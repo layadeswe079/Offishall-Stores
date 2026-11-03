@@ -1,0 +1,333 @@
+/* ==========================================================================
+   Offishall Stores — Checkout Page
+   Theme: off-white background, near-black text/buttons, soft gray borders,
+   rounded corners, Oswald font (matches dashboard/prototype)
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+/* ---------- Header ---------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    background-color: #0d0d0d;
+    border-bottom: 1px solid #222;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #e65c00;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.logo .offishall {
+    color: #ffffff;
+}
+
+.logo .stores {
+    font-family: 'Oswald', sans-serif;
+    color: #e65c00;
+    font-weight: 400;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-icons .icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.nav-icons .icon span#usernameNav {
+    font-size: 14px;
+    color: #555555;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: #e65c00;
+    color: #000;
+    font-size: 11px;
+    font-weight: 700;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logout-buttons .btn.logout {
+    background: none;
+    background-color: #e65c00;
+    border-radius: 8px;
+    border: none;
+    padding: 8px 16px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    color: #0d0d0d;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.logout-buttons .btn.logout:hover {
+    background-color: #ff8800;
+}
+
+/* ---------- Checkout layout ---------- */
+
+.checkout.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 32px;
+    background-color: #111111;
+    border-radius: 12px;
+    border: 1px solid #222;
+}
+
+/* ---------- Shipping column ---------- */
+
+.shipping.column form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.shipping.column label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #aaaaaa;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.shipping.column input[type="text"],
+.shipping.column input[type="email"],
+.shipping.column input[type="tel"],
+.shipping.column select,
+.shipping.column textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #222;
+    border-radius: 8px;
+    background-color: #0d0d0d;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.shipping.column input:focus,
+.shipping.column select:focus,
+.shipping.column textarea:focus {
+    outline: none;
+    border-color: #e65c00;
+    background-color: #111111;
+}
+
+.shipping.column input::placeholder {
+    color: #666666;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+.form-row .form-group:first-child {
+    flex: 0 0 140px;
+}
+
+.form-row .form-group:last-child {
+    flex: 1;
+}
+
+/* ---------- Shipping method cards ---------- */
+
+.shipping-method-options {
+    display: flex;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.shipping-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border: 1px solid #222;
+    border-radius: 8px;
+    padding: 14px 16px;
+    cursor: pointer;
+    background-color: #0d0d0d;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.shipping-card input[type="radio"] {
+    display: none;
+}
+
+.shipping-card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.shipping-price {
+    color: #e65c00;
+}
+
+.shipping-time {
+    font-size: 12px;
+    color: #aaaaaa;
+}
+
+.shipping-card:has(input:checked) {
+    border-color: #e65c00;
+    background-color: #111111;
+}
+
+/* ---------- Cart column ---------- */
+
+.cart-column {
+    position: sticky;
+    top: 24px;
+    align-self: start;
+    background-color: #111111;
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#checkout-cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #222;
+}
+
+.cart-item img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #222;
+}
+
+.cart-item p {
+    font-size: 13px;
+    color: #ffffff;
+}
+
+.cart-item p:last-child {
+    color: #e65c00;
+    font-size: 12px;
+}
+
+/* Totals block */
+
+.cart-totals {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 16px;
+    border-top: 1px solid #222;
+    font-size: 14px;
+    color: #fff;
+}
+
+.cart-totals div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-totals .total-row {
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
+    padding-top: 8px;
+    border-top: 1px solid #222;
+    margin-top: 4px;
+}
+.continue-btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 17px;
+    background-color: #e65c00;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    font-family: 'Oswald', sans-serif;
+}
+.continue-btn:hover {
+    background-color: #ff8800;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+    .checkout.container {
+        grid-template-columns: 1fr;
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .cart-column {
+        position: static;
+    }
+
+    .shipping-method-options {
+        flex-direction: column;
+    }
+}

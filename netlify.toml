@@ -1,0 +1,3 @@
+[build]
+command = "echo 'Static frontend — deploy Express backend separately (Railway, Render, etc.)'"
+publish = "."

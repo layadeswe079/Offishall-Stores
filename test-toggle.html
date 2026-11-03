@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Toggle Test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .password-container { position: relative; margin: 10px 0; }
+        .password-container input { width: 100%; padding: 10px; padding-right: 40px; }
+        .toggle { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h2>Password Toggle Test</h2>
+
+    <label>Password:</label>
+    <div class="password-container">
+        <input type="password" placeholder="Enter password">
+        <span class="toggle" onclick="togglepassword(event)"><i class="fas fa-eye"></i></span>
+    </div>
+
+    <label>Confirm Password:</label>
+    <div class="password-container">
+        <input type="password" placeholder="Confirm password">
+        <span class="toggle" onclick="togglepassword(event)"><i class="fas fa-eye"></i></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
