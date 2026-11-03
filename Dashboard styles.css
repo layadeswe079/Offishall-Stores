@@ -343,3 +343,74 @@ header {
 .btn-checkout:hover {
     background-color: #ff8800;
 }
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+    header {
+        padding: 16px 20px;
+    }
+    .welcome {
+        padding: 30px 20px;
+    }
+    .welcome h1 {
+        font-size: 26px;
+    }
+    .products {
+        padding: 20px;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 12px 16px;
+    }
+    .logo {
+        font-size: 17px;
+    }
+    .nav-icons {
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .logout-buttons {
+        margin-left: 0;
+    }
+    #logoutBtn {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+    .welcome {
+        padding: 24px 16px;
+    }
+    .welcome h1 {
+        font-size: 22px;
+    }
+    .products {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        padding: 16px;
+        gap: 14px;
+    }
+    .card img {
+        height: 180px;
+    }
+    .modal-content {
+        width: 95%;
+        max-height: 90vh;
+    }
+    .cart-item {
+        padding: 12px 14px;
+        gap: 10px;
+    }
+    .item-image {
+        width: 60px;
+        height: 60px;
+    }
+    .btn-remove {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+}
